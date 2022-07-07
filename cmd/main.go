@@ -39,6 +39,7 @@ func rootCmdRun(_ *cobra.Command, _ []string) {
 func main() {
 	rootCmd.Flags().StringVarP(&f, "file", "f", "", "Specify file path to read")
 	rootCmd.Flags().StringVarP(&m, "message", "m", "", "Input message")
+	rootCmd.MarkFlagsMutuallyExclusive("file", "message")
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
