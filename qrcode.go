@@ -4,6 +4,9 @@ import (
 	"errors"
 	"image"
 	"image/color"
+	_ "image/gif"
+	_ "image/jpeg"
+	_ "image/png"
 	"os"
 
 	"github.com/skip2/go-qrcode"
